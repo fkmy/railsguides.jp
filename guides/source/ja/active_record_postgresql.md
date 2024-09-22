@@ -105,7 +105,7 @@ NOTE: hstoreを使うには`hstore`拡張を有効にする必要があります
 
 ```ruby
 # db/migrate/20131009135255_create_profiles.rb
-class CreateProfiles < ActiveRecord::Migration[7.0]
+class CreateProfiles < ActiveRecord::Migration[7.2]
   enable_extension 'hstore' unless extension_enabled?('hstore')
   create_table :profiles do |t|
     t.hstore 'settings'
